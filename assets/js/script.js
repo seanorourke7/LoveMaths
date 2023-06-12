@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
     }
-    
+
     document.getElementById("answer-box").addEventListener("keydown" , function(event){
         if (event.key === "Enter") {
             checkAnswer();
@@ -124,8 +124,10 @@ function displayMultiplyQuestion(operand1, operand2){
     document.getElementById('operator').textContent = "x";
 }
 
-function displayDivisionQuestion(operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1;
+function displayDivisionQuestion(operand1, operand2){
+    
+    document.getElementById('operand1').textContent = (operand1 * operand2);
     document.getElementById('operand2').textContent = operand2;
+ 
     document.getElementById('operator').textContent = "/";
 }
